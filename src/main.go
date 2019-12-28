@@ -1,12 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
-	cout := 10
-	for cout < 100 {
-		cout += 1
-		fmt.Println(cout)
-	}
+	fmt.Println(os.TempDir())
 
 }

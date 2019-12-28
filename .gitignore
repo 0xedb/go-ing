@@ -1,2 +1,4 @@
-src/*
+*
 !/src/*.go
+!Makefile
+!README.md
