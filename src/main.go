@@ -5,14 +5,16 @@ import "fmt"
 type IPAddr [4]byte
 
 // TODO: Add a "String() string" method to IPAddr.
-func (ip *IPAddr) String() string {
+func (ip IPAddr) String() string {
 	var str string
-	for i:=0; i < len(ip) ; i++ {
-		str += fmt.Sprintf("%s", ip[i]) 
+	for i := 0; i < len(ip); i++ {
+		str += fmt.Sprintf("%v", ip[i])
+		if i != len(ip)-1 {
+			str += "."
+		}
 	}
 	return str
 }
- 
 
 func main() {
 	hosts := map[string]IPAddr{
