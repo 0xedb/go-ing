@@ -7,5 +7,6 @@ import (
 
 func main() {
 	fmt.Println(os.TempDir())
+	fmt.Println(os.Executable())
 
 }
