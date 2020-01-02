@@ -20,6 +20,7 @@ func zero() int {
 
 func main() {
 	w := 'K'
-	fmt.Printf("%T", w)
- 
+	fmt.Printf("%T\n\n", w)
+	fmt.Println(one())
+	fmt.Println(zero())
 }
