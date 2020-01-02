@@ -1,4 +1,1 @@
-*
-!/src/*.go
-!Makefile
-!README.md
+bin

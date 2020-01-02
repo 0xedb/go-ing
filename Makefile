@@ -1,5 +1,5 @@
 build:
-	go build src/main.go
+	go build src/github/theBashShell/hello/hello.go
 
 dev: 
-	go run src/main.go
+	go run src/github/theBashShell/hello/hello.go
