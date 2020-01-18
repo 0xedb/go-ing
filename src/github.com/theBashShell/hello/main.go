@@ -1,15 +1,24 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sync"
+)
 
-
-func doubleCallback(num int, callback func(n int) string) string{
-	return callback(num)
+func conCur(msg string, wg *sync.WaitGroup) {
+	wg.Add(1)
+	go func() {
+		for st := 1; st <= 1000; {
+			fmt.Println(msg, "-----", st)
+			st++
+		}
+		wg.Done()
+	}()
 }
- 
+
 func main() {
-	echo := func(n int) string {
-	return fmt.Sprintf("%v-----", n)
-}
-	fmt.Println(doubleCallback(10, echo))
+	var wg sync.WaitGroup
+	conCur("bruno", &wg)
+	conCur("Kofi", &wg)
+	wg.Wait()
 }
