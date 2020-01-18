@@ -6,11 +6,7 @@ import "fmt"
 func doubleCallback(num int, callback func(n int) string) string{
 	return callback(num)
 }
-
-// func echo(n int) string {
-// 	return fmt.Sprintf("%v-----", n)
-// }
-
+ 
 func main() {
 	echo := func(n int) string {
 	return fmt.Sprintf("%v-----", n)
