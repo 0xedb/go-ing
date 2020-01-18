@@ -1,32 +1,19 @@
 package main
 
-import (
-	"fmt"
+import "fmt"
 
-	"github.com/golang/example/stringutil"
-	"github.com/theBashShell/beautiful"
-)
 
-type Human struct {
-	name string
-	age uint16
+func doubleCallback(num int, callback func(n int) string) string{
+	return callback(num)
 }
 
-type Walk interface {
-	Walking()
-}
-
-func (h Human) Walk() {
-	fmt.Printf("%s is walking...", h.name)
-}
+// func echo(n int) string {
+// 	return fmt.Sprintf("%v-----", n)
+// }
 
 func main() {
-	fmt.Println("main her!!!!!e")
-	fmt.Println(beautiful.Doubler(339))
-	fmt.Println(stringutil.Reverse("love"))
-
-	bruno := Human{"bruno", 1}
-	fmt.Println(bruno)
-	bruno.Walk()
-
+	echo := func(n int) string {
+	return fmt.Sprintf("%v-----", n)
+}
+	fmt.Println(doubleCallback(10, echo))
 }
