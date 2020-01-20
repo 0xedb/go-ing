@@ -15,9 +15,8 @@ func Ruler(til int) {
 	fmt.Println("--")
 	fmt.Println("-")
 	Ruler(til - 1)
-
 }
 
 func main() {
-	Ruler(5)
+	Ruler(9)
 }
