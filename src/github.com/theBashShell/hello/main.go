@@ -4,14 +4,20 @@ import (
 	"fmt"
 )
 
-// ListNode for linkedlist
-type ListNode struct {
-	data string
-	next *ListNode
+// Ruler draws ruler on screen
+func Ruler(til int) {
+	fmt.Println("----")
+	if til == 0 {
+		return
+	}
+
+	fmt.Println("---")
+	fmt.Println("--")
+	fmt.Println("-")
+	Ruler(til - 1)
+
 }
 
 func main() {
-	linkedList := new(ListNode)
-	fmt.Println(linkedList.data, linkedList.next)
-	fmt.Printf("%T\b", linkedList)
+	Ruler(5)
 }
