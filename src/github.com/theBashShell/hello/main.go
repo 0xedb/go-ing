@@ -4,6 +4,10 @@ import "fmt"
 
 type str string
 
+type nootin interface {
+	
+}
+
 type creation interface{
 	info() string
 }
