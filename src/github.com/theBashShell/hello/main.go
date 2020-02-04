@@ -1,14 +1,17 @@
 package main
 
-
 import "fmt"
 
 type str string
 
+type creation interface{
+	info() string
+}
+
 /*Human is a human prototype */
 type Human struct {
-	name string
-	age uint16
+	name      string
+	age       uint16
 	isMarried bool
 }
 
@@ -29,4 +32,6 @@ func main() {
 	fmt.Println(bruno)
 	fmt.Println(bruno.info())
 	ss.more()
+	var cc creation = &Human{}
+	fmt.Println("************ ", cc)
 }
