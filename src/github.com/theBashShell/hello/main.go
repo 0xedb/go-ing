@@ -1,22 +1,9 @@
 package main
 
-import (
-	"fmt"
-)
 
-// Ruler draws ruler on screen
-func Ruler(til int) {
-	fmt.Println("----")
-	if til == 0 {
-		return
-	}
-
-	fmt.Println("---")
-	fmt.Println("--")
-	fmt.Println("-")
-	Ruler(til - 1)
-}
+import "fmt"
 
 func main() {
-	Ruler(9)
+	var myAge uint16 = 200
+	fmt.Println(myAge)
 }
